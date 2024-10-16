@@ -28,3 +28,9 @@ jobs:
 
     - name: Run tests
       run: pytest test_calc.py
+    - name: Run tests with coverage
+      run: |
+        pip install coverage
+        coverage run -m pytest test_calc.py
+        coverage report
+
